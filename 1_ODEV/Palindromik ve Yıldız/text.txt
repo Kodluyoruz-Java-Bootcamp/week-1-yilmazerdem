@@ -1,0 +1,68 @@
+1 SORU CEVAP
+
+public class GirilenSayiPalindromik {
+
+    public static void main(String[] args) {
+        int in,ss,kademe = 0,reverse=0;
+        System.out.println("Bir tam sayı girin :");
+        Scanner scan = new Scanner(System.in);
+        in= scan.nextInt();
+        ss=in;
+
+        while (1==1)
+        {
+            while (in != 0) {
+                reverse = reverse * 10;
+                reverse = reverse + in % 10;
+                in = in / 10;
+            }
+            System.out.println(ss);
+            System.out.println(reverse);
+
+            if (ss == reverse) {
+                System.out.println("Palindrom Sayidir / "+kademe+". Denemede bulundu");
+                break;
+
+            } else {
+                in = ss+reverse;
+                ss+=reverse;
+                reverse=0;
+                kademe++;
+                continue;
+            }
+
+        }
+
+    }
+
+
+}
+
+
+2 SORU CEVAP
+public class KodluyoruzApplication {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Sayi gir : ");
+        int n = scan.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            for (int k=1;k<=i;k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for (int i = 1; i <= n; i++) {
+            for (int j=1;j<=(n*2)-i;j++){
+                System.out.print(" ");
+            }
+                for (int k=1;k<=i;k++) {
+                    System.out.print("*");
+                }
+            System.out.println();
+        }
+    }
+}
+
